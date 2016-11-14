@@ -1,0 +1,165 @@
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\wkhtmltopdf.exe
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\ewm.Web.dll.config
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\ewm.Web.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\ewm.Web.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\CsQuery.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Dapper.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\EPPlus.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\FluentMigrator.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\FluentMigrator.Runner.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Microsoft.Web.Infrastructure.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\MsieJavaScriptEngine.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Newtonsoft.Json.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Core.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Data.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Data.Entity.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Services.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Web.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.Helpers.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.Mvc.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.Razor.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Deployment.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.WebPages.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Razor.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\CsQuery.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Dapper.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Dapper.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\EPPlus.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\FluentMigrator.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\FluentMigrator.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\FluentMigrator.Runner.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Newtonsoft.Json.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Core.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Core.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Data.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Data.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Data.Entity.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Services.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\Serenity.Web.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.pdb
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.Helpers.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.Mvc.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.Razor.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.WebPages.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Deployment.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Razor.xml
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.dll
+c:\users\abell\documents\visual studio 2015\Projects\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.pdb
+C:\Users\abell\Documents\Visual Studio 2015\Projects\ewm\ewm\ewm.Web\bin\EntityFramework.dll
+C:\Users\abell\Documents\Visual Studio 2015\Projects\ewm\ewm\ewm.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\abell\Documents\Visual Studio 2015\Projects\ewm\ewm\ewm.Web\bin\EntityFramework.xml
+C:\Users\abell\Documents\Visual Studio 2015\Projects\ewm\ewm\ewm.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\abell\Documents\Visual Studio 2015\Projects\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.csprojResolveAssemblyReference.cache
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\wkhtmltopdf.exe
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\ewm.Web.dll.config
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\ewm.Web.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\ewm.Web.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\CsQuery.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Dapper.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\EntityFramework.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\EPPlus.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\FluentMigrator.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\FluentMigrator.Runner.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\MsieJavaScriptEngine.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Newtonsoft.Json.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Core.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Data.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Data.Entity.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Services.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Web.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.Helpers.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.Mvc.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.Razor.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.WebPages.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\CsQuery.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Dapper.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Dapper.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\EntityFramework.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\EPPlus.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\FluentMigrator.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\FluentMigrator.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\FluentMigrator.Runner.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Newtonsoft.Json.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Core.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Core.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Data.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Data.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Data.Entity.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Services.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\Serenity.Web.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.Helpers.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.Mvc.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.Razor.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.WebPages.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.csprojResolveAssemblyReference.cache
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.dll
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.pdb
+C:\Users\AB\Desktop\ewm 11.7.2016_1\ewm\ewm\ewm.Web\bin\WhatsAppApi.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\wkhtmltopdf.exe
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\ewm.Web.dll.config
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\ewm.Web.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\ewm.Web.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\CsQuery.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Dapper.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\EntityFramework.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\EntityFramework.SqlServer.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\EPPlus.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\FluentMigrator.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\FluentMigrator.Runner.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\MsieJavaScriptEngine.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Newtonsoft.Json.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Core.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Data.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Data.Entity.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Services.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Web.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.Helpers.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.Mvc.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.Razor.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Deployment.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.WebPages.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Razor.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\WhatsAppApi.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\CsQuery.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Dapper.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Dapper.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\EntityFramework.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\EntityFramework.SqlServer.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\EPPlus.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\FluentMigrator.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\FluentMigrator.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\FluentMigrator.Runner.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Newtonsoft.Json.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Core.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Core.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Data.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Data.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Data.Entity.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Services.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Serenity.Web.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\StackExchange.Exceptional.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.Helpers.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.Mvc.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.Razor.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.WebPages.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Deployment.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\System.Web.WebPages.Razor.xml
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.dll
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.pdb
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\bin\Scripts\_ewm_scripts\EventSelected.js
+C:\Users\abell\ownCloud\Personal\Anton\ewm 11.7.2016_2\ewm\ewm\ewm.Web\obj\Debug\ewm.Web.csprojResolveAssemblyReference.cache

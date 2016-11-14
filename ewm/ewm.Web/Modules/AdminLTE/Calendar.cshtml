@@ -1,0 +1,464 @@
+﻿@{
+    ViewData["Title"] = "Calendar";
+}
+
+@* Initialization and style scripts. *@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+<script src="~/Scripts/adminlte/demo.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src='cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js'></script>
+
+<style>
+    label, input {
+        display: block;
+    }
+
+        input.text {
+            margin-bottom: 12px;
+            width: 95%;
+            padding: .4em;
+        }
+
+    fieldset {
+        padding: 0;
+        border: 0;
+        margin-top: 25px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin: .6em 0;
+    }
+
+    div#users-contain {
+        width: 350px;
+        margin: 20px 0;
+    }
+
+        div#users-contain table {
+            margin: 1em 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            div#users-contain table td, div#users-contain table th {
+                border: 1px solid #eee;
+                padding: .6em 10px;
+                text-align: left;
+            }
+
+    .ui-dialog .ui-state-error {
+        padding: .3em;
+    }
+
+    .validateTips {
+        border: 1px solid transparent;
+        padding: 0.3em;
+    }
+</style>
+
+<script>
+    $(function () {
+
+        ///------------------------------------------------------------------------------------------------------
+        /// Add Classes Dialog
+        /// Dialog for creating new classes. This will also initialize the dialog for creating the series.
+        ///
+        var dialog, form,
+            className = $("#className"),
+            startDate = $("#startDate"),
+            startTime = $("#startTime"),
+            endDate = $("#endDate"),
+            endTime = $("#endTime"),
+            Monday = $("#Monday"),
+            Tuesday = $("#Tuesday"),
+            Wednesday = $("#Wednesday"),
+            Thursday = $("#Thursday"),
+            Friday = $("#Friday"),
+            Saturday = $("#Saturday"),
+            Sunday = $("#Sunday"),
+            Users = $("#users"),
+            allFields = $([]).add(className).add(startDate).add(startTime).add(endDate).add(endTime),
+            tips = $(".validateTips");
+
+        function addClass() {
+            var valid = true;
+            allFields.removeClass("ui-state-error");
+
+            if (valid) {
+                var dataRow = {
+                    className: className.val(),
+                    startDate: startDate.val(),
+                    startTime: startTime.val(),
+                    endDate: endDate.val(),
+                    endTime: endTime.val(),
+                    repeatOnDays: [],
+                    selectedUsers: []
+                };
+
+                // Check for days of week
+                if (Monday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Monday");
+                }
+                if (Tuesday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Tuesday");
+                }
+                if (Wednesday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Wednesday");
+                }
+                if (Thursday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Thursday");
+                }
+                if (Friday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Friday");
+                }
+                if (Saturday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Saturday");
+                }
+                if (Sunday.is(':checked') === true) {
+                    dataRow.repeatOnDays.push("Sunday");
+                }
+
+                dataRow.selectedUsers = $('select#users').val();
+
+                $.post('@Url.Action("CreateSeries", "AdminLTE")', dataRow, 
+                    function(result) {
+                        alert(result);
+                        window.location.reload();
+                    });
+
+                dialog.dialog("close");
+            }
+
+            
+            return valid;
+        }
+
+        //initialize dialog
+        dialog = $("#dialog-form").dialog({
+            autoOpen: false,
+            height: 600,
+            width: 500,
+            modal: true,
+            buttons: {
+                "Create classes": addClass,
+                Cancel: function () {
+                    dialog.dialog("close");
+                }
+            },
+            close: function () {
+                form[0].reset();
+                allFields.removeClass("ui-state-error");
+            }
+        });
+
+        form = dialog.find("form").on("submit", function (event) {
+            event.preventDefault();
+            addClass();
+        });
+
+        //link submit button to POST
+        $("#create-class").button().on("click", function () {
+            $.post('@Url.Action("GetUsers", "AdminLTE")', function (result) {
+
+                var select = document.getElementById('users');
+                select.innerHTML = "";
+
+                for (var i = 0; i < result.length; i++) {
+                    var opt = document.createElement('option');
+                    opt.value = result[i];
+                    opt.innerHTML = result[i];
+                    select.appendChild(opt);
+                }
+
+                dialog.dialog("open");
+            });
+
+        });
+
+
+        ///------------------------------------------------------------------------------------------------------
+        /// This function create a dialog box after the user clicks on an event.
+        /// Events will ask thw user if they want to delete the event or delete the seeriss
+        ///
+        var eventSelectedDialog, eventSelectedForm,
+            eventAction = $("#event-action"),
+            modifyEventId = -1,
+
+            allFields = $([]).add(eventAction).add(modifyEventId),
+            tips = $(".validateTips");
+
+
+        function eventSelected() {
+            var valid = true;
+            allFields.removeClass("ui-state-error");
+
+            if (valid) {
+                var dataRow = {
+                    eventId: modifyEventId
+                };
+
+
+                if (eventAction.val() == 2) {
+                    alert("Deleting Series");
+                    $.post('@Url.Action("DeleteSeries", "AdminLTE")', dataRow, function () {
+                        window.location.reload();
+                    });
+
+                } else if (eventAction.val() == 1) {
+                    alert("Deleting Event");
+                    $.post('@Url.Action("DeleteEvent", "AdminLTE")', dataRow, function () {
+                        window.location.reload();
+                    });
+                }
+
+
+                eventSelectedDialog.dialog("close");
+            }
+            return valid;
+        }
+
+        eventSelectedDialog = $("#event-selected-form").dialog({
+            autoOpen: false,
+            height: 200,
+            width: 350,
+            modal: true,
+            buttons: {
+                "Submit": eventSelected,
+                Cancel: function () {
+                    eventSelectedDialog.dialog("close");
+                }
+            },
+            close: function () {
+                eventSelectedForm[0].reset();
+                allFields.removeClass("ui-state-error");
+            }
+        });
+
+        eventSelectedForm = dialog.find("form").on("submit", function (event) {
+            event.preventDefault();
+            eventSelected();
+        });
+
+        ///------------------------------------------------------------------------------------------------------
+        /// Add calendar to the form
+        /// Function loads the states of the calend adn links events of the interactions to other JS functions.
+        /// This function also calls JS/Controllers to load/update/delete/addd events.
+        ///
+        var sourceFullView = { url: '/AdminLTE/GetCalendarEvents/' };
+        var sourceSummaryView = { url: '/AdminLTE/GetCalendarSummary/' };
+        var CalLoading = true;
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            defaultView: 'agendaWeek',
+            editable: true,
+            allDaySlot: false,
+            selectable: true,
+            slotMinutes: 15,
+            events: '/AdminLTE/GetCalendarEvents/',
+            eventClick: function (calEvent, jsEvent, view) {
+                modifyEventId = calEvent.id;
+                eventSelectedDialog.dialog("open");
+            },
+
+            eventDrop: function (event, dayDelta, minuteDelta, allDay, revertFunc) {
+                if (confirm("Confirm move?")) {
+                    UpdateEvent(event.id, event.start, event.end);
+                }
+                else {
+                    revertFunc();
+                }
+            },
+
+            eventResize: function (event, dayDelta, minuteDelta, revertFunc) {
+
+                if (confirm("Confirm change appointment length?")) {
+                    UpdateEvent(event.id, event.start, event.end);
+                }
+                else {
+                    revertFunc();
+                }
+            },
+
+            dayClick: function (date, allDay, jsEvent, view) {
+                $.post('@Url.Action("GetUsers", "AdminLTE")', function (result) {
+
+                    var select = document.getElementById('users');
+
+                    for (var i = 0; i <= result.length; i++) {
+                        var opt = document.createElement('option');
+                        opt.value = result[i];
+                        opt.innerHTML = result[i];
+                        select.appendChild(opt);
+                    }
+                    dialog.dialog("open");
+                });
+            },
+
+            viewRender: function (view, element) {
+                if (!CalLoading) {
+                    $('.fc-event').remove();
+                }
+            }
+        });
+
+        CalLoading = false;
+
+        $('#btnPopupCancel').click(function () {
+            ClearPopupFormValues();
+            $('#popupEventForm').hide();
+        });
+
+        $('#btnPopupSave').click(function () {
+
+            $('#popupEventForm').hide();
+
+            var dataRow = {
+                'Title': $('#eventTitle').val(),
+                'NewEventDate': $('#eventDate').val(),
+                'NewEventTime': $('#eventTime').val(),
+                'NewEventDuration': $('#eventDuration').val()
+            }
+
+            ClearPopupFormValues();
+
+            $.ajax({
+                type: 'POST',
+                url: "/AdminLTE/SaveEvent",
+                data: dataRow,
+                success: function (response) {
+                    if (response == 'True') {
+                        $('#calendar').fullCalendar('refetchEvents');
+                        alert('New event saved!');
+                    }
+                    else {
+                        alert('Error, could not save event!');
+                    }
+                }
+            });
+        });
+
+        function ShowEventPopup(date) {
+            ClearPopupFormValues();
+            $('#popupEventForm').show();
+            //$('#eventTitle').focus();
+
+        }
+
+        function ClearPopupFormValues() {
+            $('#eventID').val("");
+            $('#eventTitle').val("");
+            $('#eventDateTime').val("");
+            $('#eventDuration').val("");
+        }
+
+        function UpdateEvent(EventID, EventStart, EventEnd) {
+
+            var dataRow = {
+                eventId: EventID,
+                eventStart: EventStart.toISOString(),
+                eventEnd: EventEnd.toISOString()
+            };
+
+            $.post('@Url.Action("UpdateEvent", "AdminLTE")', dataRow);
+        }
+
+    });
+</script>
+
+
+<!-- #region Calendar HTML - Container for Calendar object -->
+<div class="row">
+    <button id="create-class" type="button" class="btn btn-primary btn-flat"> Add New Class</button>
+    <div class="">
+        <div class="box box-primary">
+            <div class="box-body no-padding">
+                <!-- THE CALENDAR -->
+                <div id="calendar"></div>
+            </div><!-- /.box-body -->
+        </div><!-- /. box -->
+    </div><!-- /.col -->
+</div><!-- /.row -->
+<!-- #endregion -->
+
+
+<!--
+    Add Classes dialog.
+    Creates a dialog for ceation of new events. The form will be POSTed to the controller.    
+     -->
+<div id="dialog-form" title="Create class">
+    <p class="validateTips">All form fields are required.</p>
+
+    <form>
+        <fieldset>
+            <label for="className">Class Name</label>
+            <input type="text" name="className" id="className" value="Class Name" class="text ui-widget-content ui-corner-all">
+            <label for="startDate">Start Date</label>
+            <input type="date" name="startDate" id="startDate" value="" class="text ui-widget-content ui-corner-all">
+            <label for="endDate">End Date</label>
+            <input type="date" name="endDate" id="endDate" value="" class="text ui-widget-content ui-corner-all">
+
+            <label for="startTime">Start Time</label>
+            <input type="time" name="startTime" id="startTime" value="" class="text ui-widget-content ui-corner-all">
+            <label for="endTime">End Time</label>
+            <input type="time" name="endTime" id="endTime" value="" class="text ui-widget-content ui-corner-all">
+        </fieldset>
+
+            
+            
+            <div class="row">
+                <label for="endTime">Repeat on:</label>
+                <div class="align_left col-lg-12 ui-widget-content" >
+                    <input type="checkbox" id="Monday" name="Monday" value="Monday" />Monday<br>
+                    <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday" />Tuesday<br />
+                    <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday" />Wednesday<br />
+                    <input type="checkbox" id="Thursday" name="Thursday" value="Thursday" />Thursday<br />
+                    <input type="checkbox" id="Friday" name="Friday" value="Friday" />Friday<br />
+                    <input type="checkbox" id="Saturday" name="Saturday" value="Saturday" />Saturday<br />
+                    <input type="checkbox" id="Sunday" name="Sunday" value="Sunday" />Sunday<br />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-10">
+                    <label for="users">Add users</label>
+                    <select class="ui-selectmen" name="users" id="users" multiple />
+                </div>
+
+            </div>
+            
+
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+    </form>
+</div>
+
+<div id="event-selected-form" title="Event Selected">
+    <form>
+        <fieldset>
+            <label for="event-action">What would you like to do with this event?</label>
+            <select name="event-action" id="event-action" class="select2-active">
+                <option value="1">Delete this event.</option>
+                <option value="2">Delete this series.</option>
+                @* Todo: future build. Refer to Contorller functions. *@
+                @*<option value="3">Modify this event.</option>
+                <option value="4">Modify this Series.</option>*@
+            </select>
+
+            <!-- Allow form submission with keyboard without duplicating the dialog button -->
+            <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+        </fieldset>
+    </form>
+</div>
+
+<!-- #endregion -->
