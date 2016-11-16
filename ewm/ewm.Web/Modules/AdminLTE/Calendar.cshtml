@@ -60,6 +60,10 @@
         border: 1px solid transparent;
         padding: 0.3em;
     }
+
+    .select2-container, .select2-container * {
+        box-sizing: border-box;
+    }
 </style>
 
 <script>
@@ -126,28 +130,30 @@
 
                 dataRow.selectedUsers = $('select#users').val();
 
-                $.post('@Url.Action("CreateSeries", "AdminLTE")', dataRow, 
+                $.post('@Url.Action("CreateSeries", "AdminLTE")', dataRow,
                     function(result) {
                         alert(result);
                         window.location.reload();
                     });
 
+                Users.select2("val", "");
                 dialog.dialog("close");
             }
 
-            
+
             return valid;
         }
 
         //initialize dialog
         dialog = $("#dialog-form").dialog({
             autoOpen: false,
-            height: 600,
-            width: 500,
+            height: 800,
+            width: 600,
             modal: true,
             buttons: {
                 "Create classes": addClass,
                 Cancel: function () {
+                    Users.select2("val", "");
                     dialog.dialog("close");
                 }
             },
@@ -175,7 +181,7 @@
                     opt.innerHTML = result[i];
                     select.appendChild(opt);
                 }
-
+                Users.select2();
                 dialog.dialog("open");
             });
 
@@ -250,8 +256,6 @@
         /// Function loads the states of the calend adn links events of the interactions to other JS functions.
         /// This function also calls JS/Controllers to load/update/delete/addd events.
         ///
-        var sourceFullView = { url: '/AdminLTE/GetCalendarEvents/' };
-        var sourceSummaryView = { url: '/AdminLTE/GetCalendarSummary/' };
         var CalLoading = true;
 
         $('#calendar').fullCalendar({
@@ -294,13 +298,17 @@
                 $.post('@Url.Action("GetUsers", "AdminLTE")', function (result) {
 
                     var select = document.getElementById('users');
+                    select.innerHTML = "";
 
-                    for (var i = 0; i <= result.length; i++) {
+
+                    for (var i = 0; i < result.length; i++) {
                         var opt = document.createElement('option');
                         opt.value = result[i];
                         opt.innerHTML = result[i];
                         select.appendChild(opt);
+
                     }
+                    Users.select2();
                     dialog.dialog("open");
                 });
             },
@@ -320,9 +328,7 @@
         });
 
         $('#btnPopupSave').click(function () {
-
             $('#popupEventForm').hide();
-
             var dataRow = {
                 'Title': $('#eventTitle').val(),
                 'NewEventDate': $('#eventDate').val(),
@@ -390,57 +396,83 @@
     </div><!-- /.col -->
 </div><!-- /.row -->
 <!-- #endregion -->
-
-
 <!--
     Add Classes dialog.
-    Creates a dialog for ceation of new events. The form will be POSTed to the controller.    
+    Creates a dialog for ceation of new events. The form will be POSTed to the controller.
      -->
-<div id="dialog-form" title="Create class">
-    <p class="validateTips">All form fields are required.</p>
 
-    <form>
-        <fieldset>
-            <label for="className">Class Name</label>
-            <input type="text" name="className" id="className" value="Class Name" class="text ui-widget-content ui-corner-all">
-            <label for="startDate">Start Date</label>
-            <input type="date" name="startDate" id="startDate" value="" class="text ui-widget-content ui-corner-all">
-            <label for="endDate">End Date</label>
-            <input type="date" name="endDate" id="endDate" value="" class="text ui-widget-content ui-corner-all">
 
-            <label for="startTime">Start Time</label>
-            <input type="time" name="startTime" id="startTime" value="" class="text ui-widget-content ui-corner-all">
-            <label for="endTime">End Time</label>
-            <input type="time" name="endTime" id="endTime" value="" class="text ui-widget-content ui-corner-all">
-        </fieldset>
 
-            
-            
+<div id="dialog-form" title="Create class" class="modal-dialog-open">
+    <div class="box-header with-border">
+        <form>
             <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Select students</label>
+                        <select class="form-control select2" multiple="multiple" data-placeholder="Select students" style="width: 100%;" ame="users" id="users"></select>
+                    </div><!-- /.form-group -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+
+            <fieldset>
+                <label for="className">Class Name</label>
+                <input type="text" name="className" id="className" placeholder="Class Name" class="text ui-widget-content ui-corner-all">
+                <label for="startDate">Start Date</label>
+                <input type="date" name="startDate" id="startDate" value="" class="text ui-widget-content ui-corner-all">
+                <label for="endDate">End Date</label>
+                <input type="date" name="endDate" id="endDate" value="" class="text ui-widget-content ui-corner-all">
+
+                <label for="startTime">Start Time</label>
+                <input type="time" name="startTime" id="startTime" value="" class="text ui-widget-content ui-corner-all">
+                <label for="endTime">End Time</label>
+                <input type="time" name="endTime" id="endTime" value="" class="text ui-widget-content ui-corner-all">
+
+
+
                 <label for="endTime">Repeat on:</label>
-                <div class="align_left col-lg-12 ui-widget-content" >
-                    <input type="checkbox" id="Monday" name="Monday" value="Monday" />Monday<br>
-                    <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday" />Tuesday<br />
-                    <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday" />Wednesday<br />
-                    <input type="checkbox" id="Thursday" name="Thursday" value="Thursday" />Thursday<br />
-                    <input type="checkbox" id="Friday" name="Friday" value="Friday" />Friday<br />
-                    <input type="checkbox" id="Saturday" name="Saturday" value="Saturday" />Saturday<br />
-                    <input type="checkbox" id="Sunday" name="Sunday" value="Sunday" />Sunday<br />
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Monday" name="Monday" value="Monday" />Monday
+                    </label>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-10">
-                    <label for="users">Add users</label>
-                    <select class="ui-selectmen" name="users" id="users" multiple />
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday" />Tuesday
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday" />Wednesday
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Thursday" name="Thursday" value="Thursday" />Thursday
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Friday" name="Friday" value="Friday" />Friday
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Saturday" name="Saturday" value="Saturday" />Saturday
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="Sunday" name="Sunday" value="Sunday" />Sunday
+                    </label>
                 </div>
 
-            </div>
-            
+            </fieldset>
 
             <!-- Allow form submission with keyboard without duplicating the dialog button -->
             <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
-    </form>
+        </form>
+    </div>
 </div>
 
 <div id="event-selected-form" title="Event Selected">
@@ -452,7 +484,7 @@
                 <option value="2">Delete this series.</option>
                 @* Todo: future build. Refer to Contorller functions. *@
                 @*<option value="3">Modify this event.</option>
-                <option value="4">Modify this Series.</option>*@
+                    <option value="4">Modify this Series.</option>*@
             </select>
 
             <!-- Allow form submission with keyboard without duplicating the dialog button -->
