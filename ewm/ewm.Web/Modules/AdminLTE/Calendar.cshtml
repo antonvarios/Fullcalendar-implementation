@@ -275,22 +275,22 @@
                 eventSelectedDialog.dialog("open");
             },
 
-            eventDrop: function (event, dayDelta, minuteDelta, allDay, revertFunc) {
+            eventDrop: function (event, dayDelta, minuteDelta, allDay) {
                 if (confirm("Confirm move?")) {
                     UpdateEvent(event.id, event.start, event.end);
                 }
                 else {
-                    revertFunc();
+                    window.location.reload();
                 }
             },
 
-            eventResize: function (event, dayDelta, minuteDelta, revertFunc) {
+            eventResize: function (event, dayDelta, minuteDelta) {
 
                 if (confirm("Confirm change appointment length?")) {
                     UpdateEvent(event.id, event.start, event.end);
                 }
                 else {
-                    revertFunc();
+                    window.location.reload();
                 }
             },
 
